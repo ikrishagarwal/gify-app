@@ -236,7 +236,7 @@ window.onload = () => {
 
   const content = document.createElement("div");
   content.innerHTML =
-    "All this code is open-source on Github. You can <a href='#'>fork</a> this repo there and show your contribution.";
+    "All this code is open-source on Github. You can <a href='https://github.com/KrishAgarwal2811/gify-app/'>fork</a> this repo there and show your contribution.";
   text.appendChild(content);
 
   pop.appendChild(text);
