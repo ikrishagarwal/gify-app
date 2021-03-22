@@ -1,0 +1,64 @@
+<!-- Created by Krish and Good_Bits -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giphy App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper dark-theme">
+      <form class="search-bar-container" onsubmit="startsearch()">
+        <input
+          type="text"
+          id="search-bar"
+          autocomplete="off"
+          placeholder="Search your favorite GIFs"
+        />
+        <button type="submit" onclick="startsearch()" class="search-btn btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g
+              stroke-width="3"
+              transform="translate(0.5 0.5)"
+              fill="none"
+              stroke="#fff"
+            >
+              <line x1="22" y1="22" x2="16.4" y2="16.4"></line>
+              <circle stroke="#fff" cx="10" cy="10" r="9"></circle>
+            </g>
+          </svg>
+        </button>
+      </form>
+      <div class="main">
+        <div class="gif-container"></div>
+        <div class="pagination" data-state="hidden">
+          <button onclick="next()" class="next-btn btn">
+            Load More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <title>ic_navigate_next_24px</title>
+              <g fill="#fff">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- used for copy to clipboard function -->
+    <input type="text" id="hidden-input" />
+  </body>
+</html>

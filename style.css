@@ -1,0 +1,318 @@
+/* Created by Krish & Good_Bits */
+
+/* SF Pro Text ------ bold */
+@import url("http://db.onlinewebfonts.com/c/1bd3de6fcdd9ba7750e5a353dc6ef6e3?family=SF+Pro+Text");
+
+/* SF Pro Text ------ medium */
+@font-face {
+  font-family: "SF Pro Text Medium";
+  src: url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.eot");
+  src: url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/1c45e28f8e86cc89876f003b953cc3e9.svg#SF Pro Text")
+      format("svg");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+:root {
+  --search-bar-height: 2.5rem;
+}
+
+.dark-theme {
+  --background: #222831;
+  --surface: #4d5d6d;
+  --on-surface: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    opacity: 50%;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #b2c1da;
+    border-radius: 4px;
+  }
+}
+
+#pop-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  opacity: 0.9;
+  background: #393e46;
+  z-index: 99;
+}
+
+.pop {
+  width: 90vw;
+  max-width: 380px;
+  width: clamp(1px, 90vw, 380px);
+  height: auto;
+  /* background: rgb(243 243 243); */
+  background: rgb(242, 242, 247);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  overflow: hidden;
+  box-shadow: 2px, 2px, 8px, 2px, rgb(0 0 0 / 10%);
+}
+
+.pop .title {
+  width: 100%;
+  text-align: center;
+  /* border-bottom: 0.5px solid rgb(121, 124, 134); */
+  border-radius: 8px 8px 0 0;
+  padding: 13px;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 1.6rem;
+  font-family: "SF Pro Text", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.pop .text {
+  width: 100%;
+  padding: 10px 20px 15px 20px;
+  font-weight: 400;
+  font-family: "SF Pro Text Medium", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pop > button {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgb(209, 209, 214);
+  padding: 8px 8px 10px 8px;
+  border-radius: 0 0 8px 8px;
+  opacity: 0.9;
+  font-weight: 500;
+  color: rgb(10, 132, 255);
+  font-size: 1.15rem;
+  font-family: "SF Pro Text", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(242, 242, 247);
+  cursor: pointer;
+}
+
+.pop a {
+  color: #3b4650;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 0.85;
+  display: inline-block;
+  border-bottom: 1.5px solid #3b4650;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--background);
+}
+
+.search-bar-container {
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  border-radius: 0 0 16px 16px;
+
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 5px 12px rgba(0, 0, 0, 0.06);
+}
+
+.search-bar-container input {
+  flex: 1;
+  padding-left: 0.8rem;
+  height: var(--search-bar-height);
+  outline: none;
+  border: 0;
+  border-radius: 4px 0 0 4px;
+
+  color: #fff;
+  background-color: #393e46;
+}
+
+.search-bar-container input::placeholder {
+  color: rgb(137, 140, 156);
+  font-weight: 500;
+}
+
+.search-bar-container .search-btn {
+  outline: none;
+  border: none;
+  position: relative;
+  height: var(--search-bar-height);
+  width: var(--search-bar-height);
+  flex: 0 0 var(--search-bar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+
+  background-color: var(--surface);
+}
+
+.search-bar-container .search-btn svg {
+  transform: scale(0.8);
+}
+
+.main {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.gif-container {
+  padding: 1rem;
+  padding-bottom: 0rem;
+}
+
+.gif-container .gif {
+  position: relative;
+  /* padding: 1rem ; */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 5px 12px rgba(0, 0, 0, 0.06);
+
+  transition: all 300ms ease-out;
+  animation: float-up 500ms ease-out;
+}
+
+@keyframes float-up {
+  from {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.gif-container .gif:hover {
+  transform: scale(1.02);
+}
+
+.gif-container .gif + .gif {
+  margin-top: 1rem;
+}
+
+.gif-container .gif img {
+  display: block;
+  width: 100%;
+}
+
+.gif-container .gif .url {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
+  background-color: var(--surface);
+}
+
+.main .pagination {
+  padding: 1rem;
+  transition: all 300ms ease-out;
+}
+
+.main .pagination[data-state="hidden"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main .pagination[data-state="visible"] {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.main .pagination .next-btn {
+  position: relative;
+  padding: 0.5rem 2rem 0.5rem 2.5rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  overflow: hidden;
+
+  color: var(--on-surface);
+  background-color: var(--surface);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 5px 12px rgba(0, 0, 0, 0.06);
+
+  transition: all 300ms ease-out;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: all 300ms;
+  opacity: 0;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+.btn:hover::before {
+  opacity: 0.1;
+}
+
+#hidden-input {
+  position: fixed;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+}
