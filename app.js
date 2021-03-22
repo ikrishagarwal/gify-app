@@ -1,4 +1,4 @@
-// Created by Good_Bits
+// Created by Krish and Good_Bits
 
 let gifContainer;
 let paginationElement;
