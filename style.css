@@ -98,8 +98,7 @@
   width: 100%;
   padding: 10px 20px 15px 20px;
   font-weight: 400;
-  font-family: "SF Pro Text Medium", "Segoe UI", Tahoma, Geneva, Verdana,
-    sans-serif;
+  font-family: "SF Pro Text Medium", sans-serif;
   text-align: center;
   display: flex;
   align-items: center;
