@@ -149,6 +149,7 @@ const tenorCallback_search = (responsetext) => {
   }
 
   enableNextButton();
+   document.body.removeChild(document.querySelector("#loader"));
 };
 
 // search for data
